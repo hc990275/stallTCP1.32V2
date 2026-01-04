@@ -1,25 +1,25 @@
 import { connect } from 'cloudflare:sockets'; 
 
 // =============================================================================
-// 🟣 1. 用户配置区域 (优先级: 环境变量 > D1 > KV > 硬编码)
+// 🟣 1. 用户配置区域 (优先级: 环境变量 > D1 > KV > 硬编码) 【优先环境变量调用用户配置区域】
 // =============================================================================
-let UUID = "06b65903-406d-4a41-8463-6fd5c0ee7798"; 
-const WEB_PASSWORD = "你的登录密码"; 
-const SUB_PASSWORD = "你的订阅密码"; 
-const DEFAULT_PROXY_IP = "ProxyIP.US.CMLiussss.net"; 
-const DEFAULT_SUB_DOMAIN = "sub.cmliussss.net"; 
-const TG_GROUP_URL = "https://t.me/zyssadmin";
-const TG_CHANNEL_URL = "https://t.me/cloudflareorg";
-const PROXY_CHECK_URL = "https://kaic.hidns.co/";
-const DEFAULT_CONVERTER = "https://subapi.cmliussss.net";
-const CLASH_CONFIG = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini";
-const SINGBOX_CONFIG_V12 = "https://raw.githubusercontent.com/sinspired/sub-store-template/main/1.12.x/sing-box.json";
-const SINGBOX_CONFIG_V11 = "https://raw.githubusercontent.com/sinspired/sub-store-template/main/1.11.x/sing-box.json";
-const TG_BOT_TOKEN = "";
-const TG_CHAT_ID = "";
-const ADMIN_IP = "";
-const LOGIN_PAGE_TITLE = "Worker Login";
-const DASHBOARD_TITLE = "烈火控制台 · Glass LH"; 
+let UUID = "06b65903-406d-4a41-8463-6fd5c0ee7798";  //修改有效的uuid。不要使用默认值
+const WEB_PASSWORD = "你的登录密码";   //修改登录密码，不要使用默认值
+const SUB_PASSWORD = "你的订阅密码";   //修改订阅密码，不要使用默认值
+const DEFAULT_PROXY_IP = "ProxyIP.US.CMLiussss.net";  //可修改指定的proxyip
+const DEFAULT_SUB_DOMAIN = "sub.cmliussss.net";  // 可修改指定的sub订阅器
+const TG_GROUP_URL = "https://t.me/zyssadmin"; //可自定义修改任意内容
+const TG_CHANNEL_URL = "https://t.me/cloudflareorg"; //可自定义修改任意内容
+const PROXY_CHECK_URL = "https://kaic.hidns.co/"; //可修改proxyip检测站
+const DEFAULT_CONVERTER = "https://subapi.cmliussss.net"; //可修改订阅器转换api
+const CLASH_CONFIG = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; //可修改转换订阅的配置文件ini
+const SINGBOX_CONFIG_V12 = "https://raw.githubusercontent.com/sinspired/sub-store-template/main/1.12.x/sing-box.json"; //1.11无法使用时会自动切换到1.12进行调用，但可修改singbox的js配置。
+const SINGBOX_CONFIG_V11 = "https://raw.githubusercontent.com/sinspired/sub-store-template/main/1.11.x/sing-box.json"; //默认优先调用1.11，但可修改singbox的js配置。
+const TG_BOT_TOKEN = ""; //在此处telegram bot的token令牌
+const TG_CHAT_ID = ""; //在此处修改添加你的telegram 用户id
+const ADMIN_IP = ""; //在此处修改添加你的白名单IP
+const LOGIN_PAGE_TITLE = "Worker Login"; // 在此处修改你的登录页标题名
+const DASHBOARD_TITLE = "烈火控制台 · Glass LH";  // 在此处修改你的管理后台标题名
 
 // =============================================================================
 // 🟢 特征码深度混淆 (全文无敏感词)
