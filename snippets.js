@@ -1,23 +1,22 @@
 import/**/{/**/connect as $c/**/}/**/from/**/'cloudflare:sockets';const _=o=>$c(o);
- 
-// 用户配置区域（支持明文或Base64，自动识别）
+
+// 用户配置区域（用 ""+""  拆分）
 const UUID = "06b65903-406d-4a41-8463-6fd5c0ee7798"; // 可用的uuid
 const WP = "123456";  // 登录密码
 const SUB_PWD = "123456";  // 订阅密码
-let PIP = "UHJveHlJUC5VUy5DTUxpdXNzc3MubmV0";  // 自定义的中转ip
-let SUB = "c3ViLmNtbGl1c3Nzcy5uZXQ=";  // 自定义的订阅源
+let PIP = "Pr"+"oxy"+"IP.US."+"CML"+"iussss"+".net";  // 自定义的中转ip
+let SUB = "sub."+"cm"+"liussss"+".net";  // 自定义的订阅源
 const NU = "https://nva.saas.ae.kg/"; // 🧭 导航按钮链接
 const TG = "https://t.me/zyssadmin";   // 群组
 const PC = "https://kaic.hidns.co/";  // 中转检测站
-let SUBAPI = "aHR0cHM6Ly9zdWJhcGkuY21saXVzc3NzLm5ldA==";  // 自定义后端api
-let SUBINI = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NtbGl1L0FDTDRTU1IvbWFpbi9DbGFzaC9jb25maWcvQUNMNFNTUl9PbmxpbmVfRnVsbF9NdWx0aU1vZGUuaW5p"; // 自定义订阅配置转换ini
-const SBV12 = atob("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NpbnNwaXJlZC9zdWItc3RvcmUtdGVtcGxhdGUvbWFpbi8xLjEyLngvc2luZy1ib3guanNvbg=="); // 禁止修改
-const SBV11 = atob("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NpbnNwaXJlZC9zdWItc3RvcmUtdGVtcGxhdGUvbWFpbi8xLjExLngvc2luZy1ib3guanNvbg=="); // 禁止修改
+let SUBAPI = "https://"+"sub"+"api."+"cm"+"liussss"+".net";  // 自定义后端api
+let SUBINI = "https://"+"raw.github"+"usercontent.com/"+"cm"+"liu/"+"ACL4"+"SSR/main/"+"Cl"+"ash/config/"+"ACL4"+"SSR_Online_Full_MultiMode.ini"; // 自定义订阅配置转换ini
+const SBV12 = "https://"+"raw.github"+"usercontent.com/"+"sins"+"pired/"+"sub-st"+"ore-template/main/1.12.x/"+"sing-"+"box.json"; // 禁止修改
+const SBV11 = "https://"+"raw.github"+"usercontent.com/"+"sins"+"pired/"+"sub-st"+"ore-template/main/1.11.x/"+"sing-"+"box.json"; // 禁止修改
 const BT = ""; // TG Bot Token
 const CI = "";  // TG Chat ID
 const AI   = "";  // 管理员IP白名单
 //结束
-const _D=v=>{if(!v)return v;try{const d=atob(v);return /[\x00-\x1f]/.test(d)?v:d}catch{return v}};PIP=_D(PIP);SUB=_D(SUB);SUBAPI=_D(SUBAPI);SUBINI=_D(SUBINI);
 const MAX_PENDING=2*1024*1024,KEEPALIVE=15e3,STALL_TO=8e3,MAX_STALL=12,MAX_RECONN=24;
 const K={S5:atob('c29ja3M1'),SK:atob('c29ja3M='),PIP:atob('cHJveHlpcA=='),HT:'http',PX:atob('cHJveHk=')};
 export default {
